@@ -33,11 +33,20 @@
         </div>
     </div>
 
-    <div>
+    <div class="gallery">
         <h2>Gallery</h2>
         <div class="col">
             <div>
-                <img src="" alt="">
+                <img src="{{ asset('image/Benteng-Heritage.jpg') }}" alt="">
+            </div>
+            <div>
+                <img src="{{ asset('image/Benteng-Heritage.jpg') }}" alt="">
+            </div>
+            <div>
+                <img src="{{ asset('image/Benteng-Heritage.jpg') }}" alt="">
+            </div>
+            <div>
+                <img src="{{ asset('image/Benteng-Heritage.jpg') }}" alt="">
             </div>
         </div>
     </div>

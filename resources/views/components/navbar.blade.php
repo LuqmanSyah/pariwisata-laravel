@@ -6,8 +6,8 @@
     </div>
 
     <ul id="menu-list" class="hidden">
-        <li><a href="">Home</a></li>
-        <li><a href="">Destination</a></li>
-        <li><a href="">Gallery</a></li>
+        <li><a href="{{ route('home') }}">Home</a></li>
+        <li><a href="{{ route('destination') }}">Destination</a></li>
+        <li><a href="{{ route('gallery') }}">Gallery</a></li>
     </ul>
 </nav>
