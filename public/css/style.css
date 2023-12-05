@@ -1,0 +1,151 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: lightcyan;
+}
+
+/* Navbar */
+nav {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 50px;
+    position: fixed;
+    width: 100%;
+    z-index: 2;
+    background-color: lightblue;
+}
+
+nav div img {
+    display: none;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    gap: 2rem;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: black;
+    transition: all 0.3s;
+}
+
+nav ul li a:hover {
+    color: lightslategray;
+}
+
+/* homepage home section */
+section.home .hero {
+    position: relative;
+}
+
+section.home .hero h1 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    font-size: 50px;
+    text-align: center;
+    width: 100%;
+    color: lightblue;
+    -webkit-text-stroke: 1px white;
+    transform: translate(-50%, -50%);
+}
+
+section.home .destination {
+    padding: 20px 50px;
+}
+
+section.home .destination h2 {
+    margin-bottom: 30px;
+}
+
+section.home .destination .col {
+    display: flex;
+    gap: 2rem;
+    flex: 1;
+}
+
+section.home .destination .col div {
+    background-color: transparent;
+    border-radius: 10px;
+    position: relative;
+    overflow: hidden;
+}
+
+section.home .destination .col div img {
+    border-radius: 10px;
+    width: 100%;
+    transition: all 0.5s;
+}
+
+section.home .destination .col div:hover img {
+    transform: scale(1.5);
+}
+
+section.home .destination .col div h4 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    text-align: center;
+    color: white;
+    -webkit-text-stroke: 1px black;
+    transform: translate(-50%, -50%);
+    font-size: 40px;
+}
+
+
+
+
+/* Responsive */
+/* Tablet */
+@media screen and (max-width: 768px) {
+    /* Navbar */
+    nav {
+        flex-wrap: wrap;
+    }
+
+    nav div img {
+        display: block;
+    }
+
+    nav ul {
+        flex-direction: column;
+        width: 100%;
+        padding: 30px;
+        text-align: center;
+    }
+
+    nav ul.hidden {
+        display: none;
+    }
+
+    /* homepage home section */
+    section.home .hero h1 {
+        font-size: 40px;
+    }
+
+    section.home .destination .col {
+        flex-direction: column;
+    }
+}
+
+/* Mobile */
+@media screen and (max-width: 576px) {
+    nav {
+        padding: 20px;
+    }
+
+    section.home .hero h1 {
+        font-size: 30px;
+    }
+
+    section.home .destination {
+        padding: 20px;
+    }
+}
