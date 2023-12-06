@@ -10,8 +10,10 @@
     <div class="grid">
         @foreach ($destination as $item)
         <div>
-            <img src="{{ asset($item->image) }}" alt="{{ $item->name }}">
-            <h4>{{ $item->name }}</h4>
+            <a href="{{ route('show.destination', $item->slug) }}">
+                <img src="{{ asset($item->image) }}" alt="{{ $item->name }}">
+                <h4>{{ $item->name }}</h4>
+            </a>
         </div>
         @endforeach
     </div>
