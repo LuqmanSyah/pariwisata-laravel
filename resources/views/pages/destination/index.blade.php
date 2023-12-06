@@ -8,30 +8,12 @@
 <section class="destination">
     <h1>Destination</h1>
     <div class="grid">
+        @foreach ($destination as $item)
         <div>
-            <img src="{{ asset('image/kampung-bekelir.jpg') }}" alt="">
-            <h4>Kampung Bekelir</h4>
+            <img src="{{ asset($item->image) }}" alt="{{ $item->name }}">
+            <h4>{{ $item->name }}</h4>
         </div>
-        <div>
-            <img src="{{ asset('image/kampung-bekelir.jpg') }}" alt="">
-            <h4>Kampung Bekelir</h4>
-        </div>
-        <div>
-            <img src="{{ asset('image/kampung-bekelir.jpg') }}" alt="">
-            <h4>Kampung Bekelir</h4>
-        </div>
-        <div>
-            <img src="{{ asset('image/kampung-bekelir.jpg') }}" alt="">
-            <h4>Kampung Bekelir</h4>
-        </div>
-        <div>
-            <img src="{{ asset('image/kampung-bekelir.jpg') }}" alt="">
-            <h4>Kampung Bekelir</h4>
-        </div>
-        <div>
-            <img src="{{ asset('image/kampung-bekelir.jpg') }}" alt="">
-            <h4>Kampung Bekelir</h4>
-        </div>
+        @endforeach
     </div>
 </section>
 @endsection

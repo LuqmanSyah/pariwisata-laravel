@@ -140,6 +140,17 @@ section.destination div table tbody tr {
     border: 1px solid black;
 }
 
+section.destination div table tbody tr td button {
+    padding: 5px;
+    width: 100%;
+    border-radius: 5px;
+    color: black;
+    border: 0;
+    cursor: pointer;
+    font-size: medium;
+    background-color: aliceblue;
+}
+
 section.destination div table tbody tr:hover {
     background-color: #ccc;
 }
@@ -207,7 +218,7 @@ section.create-destination form button {
         margin-left: 30px;
     }
 
-    main img {
+    main .hamburger {
         display: inline;
     }
 }

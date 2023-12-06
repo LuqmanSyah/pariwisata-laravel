@@ -8,8 +8,8 @@
 <section class="dashboard">
     <hr>
     <div class="col">
-        <div>Destination : 0</div>
-        <div>Gallery : 0</div>
+        <div>Destination : {{ $destination }}</div>
+        <div>Gallery : {{ $gallery }}</div>
     </div>
 </section>
 @endsection

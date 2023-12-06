@@ -7,5 +7,7 @@
         <li><a href="{{ route('dashboard.index') }}">Dashboard</a></li>
         <li><a href="{{ route('dashboard.destination.index') }}">Destination</a></li>
         <li><a href="{{ route('dashboard.gallery.index') }}">Gallery</a></li>
+        <hr>
+        <li><a href="{{ route('logout') }}">Logout</a></li>
     </ul>
 </aside>

@@ -21,20 +21,26 @@
                     </tr>
                 </thead>
                 <tbody>
+                    @foreach ($destinations as $destination)
                     <tr>
-                        <td>1</td>
+                        <td>{{ $loop->iteration }}</td>
                         <td>
-                            <img src="{{ asset('image/kampung-bekelir.jpg') }}" alt="benteng">
+                            <img src="{{ asset($destination->image) }}" alt="{{ $destination->name }}">
                         </td>
-                        <td>Kampung</td>
-                        <td>Jalan</td>
-                        <td>free</td>
+                        <td>{{ $destination->name }}</td>
+                        <td>{{ $destination->address }}</td>
+                        <td>{{ $destination->price }}</td>
                         <td>
                             <a href="">Show</a>
-                            <a href="">Edit</a>
-                            <a href="">Delete</a>
+                            <a href="{{ route('dashboard.destination.edit', $destination->slug) }}">Edit</a>
+                            <form action="{{ route('dashboard.destination.delete', $destination->slug) }}" method="POST">
+                                @csrf
+                                @method('DELETE')
+                                <button type="submit">Delete</button>
+                            </form>
                         </td>
                     </tr>
+                    @endforeach
                 </tbody>
             </table>
         </div>

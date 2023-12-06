@@ -7,27 +7,27 @@
 @section('content')
     <section class="create-destination">
         <hr>
-        <form action="" enctype="multipart/form-data">
+        <form action="{{ route('dashboard.destination.store') }}" enctype="multipart/form-data" method="POST">
             @csrf
             <div>
                 <label for="">Name</label>
-                <input type="text">
+                <input type="text" name="name">
             </div>
             <div>
                 <label for="">Image</label>
-                <input type="file">
+                <input type="file" name="image">
             </div>
             <div>
                 <label for="">Price</label>
-                <input type="text">
+                <input type="number" name="price">
             </div>
             <div>
                 <label for="">Address</label>
-                <textarea name="" id="" cols="30" rows="10"></textarea>
+                <textarea name="address" id="" cols="30" rows="10"></textarea>
             </div>
             <div>
                 <label for="">Description</label>
-                <textarea name="" id="" cols="30" rows="10"></textarea>
+                <textarea name="description" id="" cols="30" rows="10"></textarea>
             </div>
             <button type="submit">Create</button>
         </form>

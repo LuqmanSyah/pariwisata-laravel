@@ -14,40 +14,27 @@
     <div class="destination">
         <h2>Destination</h2>
         <div class="col">
+            @foreach ($destination as $item)
             <div>
-                <img src="{{ asset('image/kampung-bekelir.jpg') }}" alt="kampung-bekelir">
-                <h4>Kampung Bekelir</h4>
+                <a href="{{ route('show.destination', $item->slug) }}">
+                    <img src="{{ asset($item->image) }}" alt="{{ $item->name }}">
+                    <h4>{{ $item->name }}</h4>
+                </a>
             </div>
-            <div>
-                <img src="{{ asset('image/tebing-koja.jpg') }}" alt="tebing-koja">
-                <h4>Tebing Koja</h4>
-            </div>
-            <div>
-                <img src="{{ asset('image/Benteng-Heritage.jpg') }}" alt="benteng-heritage">
-                <h4>Benteng Heritage</h4>
-            </div>
-            <div>
-                <img src="{{ asset('image/kampung-bekelir.jpg') }}" alt="kampung-bekelir">
-                <h4></h4>
-            </div>
+            @endforeach
         </div>
     </div>
 
     <div class="gallery">
         <h2>Gallery</h2>
         <div class="col">
+            @foreach ($gallery as $item)
             <div>
-                <img src="{{ asset('image/Benteng-Heritage.jpg') }}" alt="">
+                <a href="{{ route('show.gallery', $item->slug) }}">
+                    <img src="{{ asset($item->image) }}" alt="{{ $item->name }}">
+                </a>
             </div>
-            <div>
-                <img src="{{ asset('image/Benteng-Heritage.jpg') }}" alt="">
-            </div>
-            <div>
-                <img src="{{ asset('image/Benteng-Heritage.jpg') }}" alt="">
-            </div>
-            <div>
-                <img src="{{ asset('image/Benteng-Heritage.jpg') }}" alt="">
-            </div>
+            @endforeach
         </div>
     </div>
 </section>

@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="{{ asset('css/auth/style.css') }}">
 </head>
 <body>
-    <form action="">
+    <form action="{{ route('process.login') }}" method="POST">
         <h1>Login</h1>
         @csrf
         <div>

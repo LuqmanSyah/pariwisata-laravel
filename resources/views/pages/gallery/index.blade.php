@@ -8,24 +8,11 @@
 <section class="gallery">
     <h1>Gallery</h1>
     <div class="grid">
+        @foreach ($gallery as $item)
         <div>
-            <img src="{{ asset('image/Benteng-Heritage.jpg') }}" alt="">
+            <img src="{{ asset($item->image) }}" alt="{{ $item->name }}">
         </div>
-        <div>
-            <img src="{{ asset('image/Benteng-Heritage.jpg') }}" alt="">
-        </div>
-        <div>
-            <img src="{{ asset('image/Benteng-Heritage.jpg') }}" alt="">
-        </div>
-        <div>
-            <img src="{{ asset('image/Benteng-Heritage.jpg') }}" alt="">
-        </div>
-        <div>
-            <img src="{{ asset('image/Benteng-Heritage.jpg') }}" alt="">
-        </div>
-        <div>
-            <img src="{{ asset('image/Benteng-Heritage.jpg') }}" alt="">
-        </div>
+        @endforeach
     </div>
 </section>
 @endsection
