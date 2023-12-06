@@ -31,7 +31,7 @@
                         <td>{{ $destination->address }}</td>
                         <td>{{ $destination->price }}</td>
                         <td>
-                            <a href="">Show</a>
+                            <a href="{{ route('show.destination', $destination->slug) }}">Show</a>
                             <a href="{{ route('dashboard.destination.edit', $destination->slug) }}">Edit</a>
                             <form action="{{ route('dashboard.destination.delete', $destination->slug) }}" method="POST">
                                 @csrf

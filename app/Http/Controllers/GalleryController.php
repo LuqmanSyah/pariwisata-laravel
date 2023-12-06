@@ -42,6 +42,7 @@ class GalleryController extends Controller
     {
         $validatedData = $request->validate([
             'name' => 'required',
+            'image' => 'required|image|mimes:png,jpg,jpeg',
             'address' => 'required'
         ]);
 

@@ -156,33 +156,33 @@ section.destination div table tbody tr:hover {
 }
 
 /* create destination page section */
-section.create-destination hr {
+section.section-form hr {
     margin-top: 30px;
     margin-bottom: 30px;
 }
 
-section.create-destination form {
+section.section-form form {
     display: flex;
     flex-direction: column;
     gap: 2rem;
 }
 
-section.create-destination form div {
+section.section-form form div {
     display: flex;
     flex-direction: column;
 }
 
-section.create-destination form div label {
+section.section-form form div label {
     margin-bottom: 10px;
 }
 
-section.create-destination form div input, textarea {
+section.section-form form div input, textarea {
     border: 1px solid #ccc;
     padding: 10px;
     border-radius: 10px;
 }
 
-section.create-destination form button {
+section.section-form form button {
     padding: 10px;
     color: white;
     background-color: seagreen;
@@ -190,6 +190,11 @@ section.create-destination form button {
     border-radius: 10px;
     width: 10%;
     float: right;
+}
+
+.invalid-message {
+    color: red;
+    margin-top: 5px;
 }
 
 /* Responsive */

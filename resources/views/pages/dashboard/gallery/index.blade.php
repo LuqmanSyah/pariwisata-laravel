@@ -29,7 +29,7 @@
                         <td>{{ $gallery->name }}</td>
                         <td>{{ $gallery->address }}</td>
                         <td>
-                            <a href="">Show</a>
+                            <a href="{{ route('show.gallery', $gallery->slug) }}">Show</a>
                             <a href="{{ route('dashboard.gallery.edit', $gallery->slug) }}">Edit</a>
                             <form action="{{ route('dashboard.gallery.delete', $gallery->slug) }}" method="POST">
                                 @csrf

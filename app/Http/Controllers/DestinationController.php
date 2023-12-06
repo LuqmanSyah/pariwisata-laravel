@@ -44,6 +44,7 @@ class DestinationController extends Controller
         $validatedData = $request->validate([
             'name' => 'required',
             'price' => 'required',
+            'image' => 'required|image|mimes:png,jpg,jpeg',
             'address' => 'required',
             'description' => 'required'
         ]);
