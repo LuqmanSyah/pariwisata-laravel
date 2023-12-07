@@ -5,7 +5,7 @@
 @endsection
 
 @section('content')
-    <section class="destination">
+    <section class="stripped-table">
         <hr>
         <span><a href="{{ route('dashboard.index') }}" class="breadcrumbs-link">Dashboard /</a></span>
         <span><a href="{{ route('dashboard.destination.index') }}" class="breadcrumbs-link">Destination /</a></span>

@@ -91,12 +91,12 @@ section.dashboard .col div:hover {
 }
 
 /* destinationpage section */
-section.destination hr {
+section.stripped-table hr {
     margin-top: 30px;
     margin-bottom: 30px;
 }
 
-section.destination .btn {
+section.stripped-table .btn {
     text-decoration: none;
     color: white;
     padding: 10px ;
@@ -106,7 +106,7 @@ section.destination .btn {
     margin-bottom: 30px;
 }
 
-section.destination div table {
+section.stripped-table div table {
     width: 100%;
     border: 1px solid black;
     padding: 10px;
@@ -114,42 +114,46 @@ section.destination div table {
     border-radius: 10px;
 }
 
-section.destination div table thead tr th {
+section.stripped-table div table thead tr th {
     border: 1px solid black;
     padding: 10px;
     background-color: aliceblue;
 }
 
-section.destination div table tbody tr td {
+section.stripped-table div table tbody tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+section.stripped-table div table tbody tr td {
     border: 1px solid black;
     padding: 10px;
 }
 
-section.destination div table tbody tr td:last-child {
+section.stripped-table div table tbody tr td:last-child {
     display: flex;
     flex-direction: column;
     border: none;
     gap: 1rem;
 }
 
-section.destination div table tbody tr td a {
+section.stripped-table div table tbody tr td a {
     text-decoration: none;
     padding: 5px;
     width: auto;
     border-radius: 5px;
 }
 
-section.destination div table tbody tr td img {
+section.stripped-table div table tbody tr td img {
     width: 200px;
 }
 
-section.destination div table tbody tr {
+section.stripped-table div table tbody tr {
     transition: all 0.2s;
     text-align: center;
     border: 1px solid black;
 }
 
-section.destination div table tbody tr td button {
+section.stripped-table div table tbody tr td button {
     padding: 5px;
     width: 100%;
     border-radius: 5px;
@@ -173,7 +177,7 @@ section.destination div table tbody tr td button {
     color: black;
 }
 
-section.destination div table tbody tr:hover {
+section.stripped-table div table tbody tr:hover {
     background-color: #ccc;
 }
 
@@ -278,7 +282,7 @@ section.section-form form button {
     }
 
     /* destinationpagesection */
-    section.destination div table tbody tr td img {
+    section.stripped-table div table tbody tr td img {
         width: 80px;
     }
 }
