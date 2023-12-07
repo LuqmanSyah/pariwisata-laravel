@@ -31,12 +31,12 @@
                         <td>{{ $gallery->name }}</td>
                         <td>{{ $gallery->address }}</td>
                         <td>
-                            <a href="{{ route('show.gallery', $gallery->slug) }}">Show</a>
-                            <a href="{{ route('dashboard.gallery.edit', $gallery->slug) }}">Edit</a>
+                            <a href="{{ route('show.gallery', $gallery->slug) }}" class="show">Show</a>
+                            <a href="{{ route('dashboard.gallery.edit', $gallery->slug) }}" class="edit">Edit</a>
                             <form action="{{ route('dashboard.gallery.delete', $gallery->slug) }}" method="POST">
                                 @csrf
                                 @method('DELETE')
-                                <button type="submit">Delete</button>
+                                <button type="submit" class="delete">Delete</button>
                             </form>
                         </td>
                     </tr>

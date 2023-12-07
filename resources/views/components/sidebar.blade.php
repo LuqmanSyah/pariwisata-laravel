@@ -1,5 +1,5 @@
 <aside id="sidebar">
-    <h1><a href="{{ route('home') }}">Pariwisata</a></h1>
+    <h1><a href="{{ route('home') }}">{{ \App\Models\Setting::first()->site_name }}</a></h1>
 
     <span id="close">&times;</span>
 

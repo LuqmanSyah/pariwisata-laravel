@@ -6,7 +6,6 @@
         <span></span>
         <span></span>
     </div>
-
     <ul id="menu-list" class="hidden">
         <li><a href="{{ route('home') }}">Home</a></li>
         <li><a href="{{ route('destination') }}">Destination</a></li>

@@ -247,8 +247,22 @@ section.section-form form button {
         margin-left: 30px;
     }
 
+    .header {
+        display: flex;
+        align-items: center;
+    }
+
     main .hamburger {
-        display: inline;
+        display: flex;
+        width: 30px;
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+
+    main .hamburger span {
+        height: 2px;
+        background-color: black;
+        width: 100%;
     }
 
     section.dashboard .col {

@@ -23,7 +23,8 @@
             </div>
             <div>
                 <label for="">Image</label>
-                <input type="file" name="image" value="{{ $gallery->image }}">
+                <img src="{{ asset($gallery->image) }}" alt="{{ $gallery->name }}" width="100px" style="margin-bottom: 10px; border-radius: 10px">
+                <input type="file" name="image">
                 @error('image')
                     <span class="invalid-message">{{ $message }}</span>
                 @enderror

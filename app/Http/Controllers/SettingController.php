@@ -24,8 +24,12 @@ class SettingController extends Controller
         $validatedData = $request->validate([
             'site_name' => 'string',
             'about' => 'string',
-            'address' => 'string'
+            'address' => 'string',
+            'phone_number' => 'string',
+            'email' => 'email',
         ]);
+
+        $validatedData['site_name'] = ucfirst($request->site_name);
 
         Setting::first()->update($validatedData);
 

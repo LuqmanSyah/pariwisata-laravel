@@ -229,7 +229,7 @@ section.show-gallery .flex div {
 footer {
     background-color: lightblue;
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     padding: 20px 50px;
     align-items: center;
 }
@@ -278,7 +278,7 @@ footer ul li a:hover {
         width: 35px;
         display: flex;
         flex-direction: column;
-        gap: 0.6rem;
+        gap: 0.5rem;
     }
 
     nav ul {
@@ -345,6 +345,9 @@ footer ul li a:hover {
 
     /* Footer */
     footer {
+        flex-direction: column;
+        gap: 2rem;
+        align-items: start;
         justify-content: space-between;
     }
 }

@@ -20,6 +20,20 @@
                 @enderror
             </div>
             <div>
+                <label for="">Email</label>
+                <input type="email" name="email" value="{{ $setting->email }}">
+                @error('name')
+                    <span class="invalid-message">{{ $message }}</span>
+                @enderror
+            </div>
+            <div>
+                <label for="">Phone Number</label>
+                <input type="number" name="phone_number" value="{{ $setting->phone_number }}">
+                @error('name')
+                    <span class="invalid-message">{{ $message }}</span>
+                @enderror
+            </div>
+            <div>
                 <label for="">Address</label>
                 <textarea name="address" id="" cols="30" rows="10">{{ $setting->address }}</textarea>
                 @error('image')

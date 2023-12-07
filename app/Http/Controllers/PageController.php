@@ -27,6 +27,8 @@ class PageController extends Controller
     public function showDestination($slug)
     {
         $destination = Destination::where('slug', $slug)->first();
+        $destination->most_viewed += 1;
+        $destination->update();
 
         return view('pages.destination.show', compact('destination'));
     }

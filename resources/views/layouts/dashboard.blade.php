@@ -11,8 +11,14 @@
     @include('components.sidebar')
 
     <main>
-        <img src="{{ asset('image/hamburger.svg') }}" alt="hamburger" class="hamburger" width="30px" id="hamburger-icon">
-        <h1>@yield('title')</h1>
+        <div class="header">
+            <div class="hamburger" id="hamburger-icon">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <h1>@yield('title')</h1>
+        </div>
         @yield('content')
     </main>
 

@@ -19,7 +19,9 @@ class DatabaseSeeder extends Seeder
         Setting::create([
             'site_name' => 'Pariwisata',
             'address' => 'Kabupten Tangerang, Banten, Indonesia',
-            'about' => 'Selamat datang di Pariwisata Kabupaten Tangerang! Nikmati keindahan alam, kuliner lezat, dan pengalaman wisata tak terlupakan. Selamat menikmati perjalanan Anda!'
+            'about' => 'Selamat datang di Pariwisata Kabupaten Tangerang! Nikmati keindahan alam, kuliner lezat, dan pengalaman wisata tak terlupakan. Selamat menikmati perjalanan Anda!',
+            'phone_number' => '0817378272737',
+            'email' => 'pariwisata@email.com'
         ]);
     }
 }
