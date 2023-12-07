@@ -14,7 +14,7 @@
             @csrf
             <div>
                 <label for="">Name</label>
-                <input type="text" name="name">
+                <input type="text" name="name" value="{{ old('name') }}">
                 @error('name')
                     <span class="invalid-message">{{ $message }}</span>
                 @enderror
@@ -28,21 +28,21 @@
             </div>
             <div>
                 <label for="">Price</label>
-                <input type="number" name="price">
+                <input type="number" name="price" value="{{ old('price') }}">
                 @error('price')
                     <span class="invalid-message">{{ $message }}</span>
                 @enderror
             </div>
             <div>
                 <label for="">Address</label>
-                <textarea name="address" id="" cols="30" rows="10"></textarea>
+                <textarea name="address" id="" cols="30" rows="10">{{ old('address') }}</textarea>
                 @error('address')
                     <span class="invalid-message">{{ $message }}</span>
                 @enderror
             </div>
             <div>
                 <label for="">Description</label>
-                <textarea name="description" id="" cols="30" rows="10"></textarea>
+                <textarea name="description" id="" cols="30" rows="10">{{ old('description') }}</textarea>
                 @error('description')
                     <span class="invalid-message">{{ $message }}</span>
                 @enderror

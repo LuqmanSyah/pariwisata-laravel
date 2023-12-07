@@ -14,10 +14,16 @@
         <div>
             <label for="username">Username</label>
             <input type="text" id="username" placeholder="username" name="username">
+            @error ('username') 
+                <span class="invalid-message">{{ $message }}</span>
+            @enderror
         </div>
         <div>
             <label for="password">Password</label>
             <input type="password" id="password" placeholder="password" name="password">
+            @error ('password') 
+                <span class="invalid-message">{{ $message }}</span>
+            @enderror
         </div>
         <button type="submit">Login</button>
     </form>

@@ -11,6 +11,10 @@
         <h1>Explore Kab. Tangerang</h1>
     </div>
 
+    <div class="welcome">
+        <p>{{ \App\Models\Setting::first()->about }}</p>
+    </div>
+
     <div class="destination">
         <h2>Destination</h2>
         <div class="col">

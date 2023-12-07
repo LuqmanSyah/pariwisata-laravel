@@ -10,14 +10,14 @@ class AuthController extends Controller
     public function login(Request $request)
     {
         $credentials = $request->validate([
-            'username' => 'string',
-            'password' => 'string',
+            'username' => 'required|string',
+            'password' => 'required|string|min:4',
         ]);
 
         if (Auth::attempt($credentials)) {
             return redirect()->route('dashboard.index');
         } else {
-            return back();
+            return back()->withErrors(['username' => 'Invalid username or password']);
         }
     }
 }

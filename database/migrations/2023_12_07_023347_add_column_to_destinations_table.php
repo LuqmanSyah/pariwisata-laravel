@@ -14,7 +14,7 @@ class AddColumnToDestinationsTable extends Migration
     public function up()
     {
         Schema::table('destinations', function (Blueprint $table) {
-            $table->integer('most_viewed')->after('user_id');
+            $table->integer('most_viewed')->default(0)->after('user_id');
         });
     }
 
