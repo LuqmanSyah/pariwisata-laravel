@@ -10,6 +10,7 @@
         <span><a href="{{ route('dashboard.index') }}" class="breadcrumbs-link">Dashboard /</a></span>
         <span><a href="{{ route('dashboard.gallery.index') }}" class="breadcrumbs-link">Gallery /</a></span>
         <span><a href="{{ route('dashboard.gallery.edit', $gallery->slug) }}" class="breadcrumbs-link">Edit - {{ $gallery->name }} /</a></span>
+        
         <form action="{{ route('dashboard.gallery.update', $gallery->slug) }}" enctype="multipart/form-data" method="POST" style="margin-top: 30px">
             @csrf
             @method('PUT')

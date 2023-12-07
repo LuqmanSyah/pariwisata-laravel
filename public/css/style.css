@@ -44,9 +44,24 @@ nav ul li a:hover {
     color: lightslategray;
 }
 
+
+.breadcrumbs {
+    margin-top: 100px;
+}
+
+.breadcrumbs-link {
+    text-decoration: none;
+    color: black;
+    font-size: large;
+}
+
 /* homepage home section */
 section.home .hero {
-    position: relative;
+    min-height: 100vh;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 section.home .hero h1 {
@@ -220,23 +235,23 @@ section.gallery .grid div:hover img {
     transform: scale(1.5);
 }
 
-section.show-gallery {
+section.show-content {
     padding: 20px 50px;
 }
 
-section.show-gallery .flex {
-    margin-top: 100px;
+section.show-content .flex {
+    margin-top: 30px;
     margin-bottom: 30px;
     display: flex;
     width: 100%;
 }
 
-section.show-gallery .flex img {
+section.show-content .flex img {
     width: 50%;
     border-radius: 10px 0 0 10px;
 }
 
-section.show-gallery .flex div {
+section.show-content .flex div {
     padding: 40px;
     background-color: white;
     border: 1px solid #ccc;
@@ -346,18 +361,18 @@ footer ul li a:hover {
         width: auto;
     }
 
-    section.show-gallery .flex {
+    section.show-content .flex {
         flex-direction: column;
         justify-content: center;
         width: 100%;
     }
 
-    section.show-gallery .flex img {
+    section.show-content .flex img {
         width: 100%;
         border-radius: 0;
     }
 
-    section.show-gallery .flex div {
+    section.show-content .flex div {
         width: 100%;
         border: 0;
     }
@@ -399,7 +414,7 @@ footer ul li a:hover {
         padding: 20px;
     }
 
-    section.show-gallery {
+    section.show-content {
         padding: 20px;
     }
 

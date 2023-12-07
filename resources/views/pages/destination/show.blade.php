@@ -5,7 +5,13 @@
 @endsection
 
 @section('content')
-<section class="show-gallery">
+<section class="show-content">
+
+    <div class="breadcrumbs">
+        <span><a href="{{ route('destination') }}" class="breadcrumbs-link">Destination /</a></span>
+        <span><a href="{{ route('show.destination', $destination->slug) }}" class="breadcrumbs-link">{{ $destination->name }} /</a></span>
+    </div>
+
     <div class="flex">
         <img src="{{ asset($destination->image) }}" alt="">
         <div>
