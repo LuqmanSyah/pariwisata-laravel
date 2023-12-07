@@ -7,7 +7,10 @@
 @section('content')
     <section class="section-form">
         <hr>
-        <form action="{{ route('dashboard.setting.update') }}" method="POST">
+        <span><a href="{{ route('dashboard.index') }}" class="breadcrumbs-link">Dashboard /</a></span>
+        <span><a href="{{ route('dashboard.setting.index') }}" class="breadcrumbs-link">Setting /</a></span>
+        <form action="{{ route('dashboard.setting.update') }}" method="POST" style="margin-top:
+        30px;">
             @csrf
             <div>
                 <label for="">Site Name</label>

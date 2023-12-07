@@ -2,7 +2,9 @@
     <h1><a href="{{ route('home') }}">{{ \App\Models\Setting::first()->site_name }}</a></h1>
 
     <div id="hamburger-icon">
-        <img src="{{ asset('image/hamburger.svg') }}" alt="" width="30px">
+        <span></span>
+        <span></span>
+        <span></span>
     </div>
 
     <ul id="menu-list" class="hidden">

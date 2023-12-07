@@ -7,7 +7,10 @@
 @section('content')
     <section class="section-form">
         <hr>
-        <form action="{{ route('dashboard.destination.store') }}" enctype="multipart/form-data" method="POST">
+        <span><a href="{{ route('dashboard.index') }}" class="breadcrumbs-link">Dashboard /</a></span>
+        <span><a href="{{ route('dashboard.destination.index') }}" class="breadcrumbs-link">Destination /</a></span>
+        <span><a href="{{ route('dashboard.destination.create') }}" class="breadcrumbs-link">Create /</a></span>
+        <form action="{{ route('dashboard.destination.store') }}" enctype="multipart/form-data" method="POST" style="margin-top: 30px">
             @csrf
             <div>
                 <label for="">Name</label>

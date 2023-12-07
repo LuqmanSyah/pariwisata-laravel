@@ -1,7 +1,7 @@
 <aside id="sidebar">
     <h1><a href="{{ route('home') }}">Pariwisata</a></h1>
 
-    <img src="{{ asset('image/close.svg') }}" alt="close" width="30px" id="close">
+    <span id="close">&times;</span>
 
     <ul>
         <li><a href="{{ route('dashboard.index') }}">Dashboard</a></li>

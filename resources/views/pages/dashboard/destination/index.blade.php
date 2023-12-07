@@ -7,6 +7,8 @@
 @section('content')
     <section class="destination">
         <hr>
+        <span><a href="{{ route('dashboard.index') }}" class="breadcrumbs-link">Dashboard /</a></span>
+        <span><a href="{{ route('dashboard.destination.index') }}" class="breadcrumbs-link">Destination /</a></span>
         <a href="{{ route('dashboard.destination.create') }}" class="btn">Create</a>
         <div>
             <table>
@@ -31,12 +33,12 @@
                         <td>{{ $destination->address }}</td>
                         <td>{{ $destination->price }}</td>
                         <td>
-                            <a href="{{ route('show.destination', $destination->slug) }}">Show</a>
-                            <a href="{{ route('dashboard.destination.edit', $destination->slug) }}">Edit</a>
+                            <a href="{{ route('show.destination', $destination->slug) }}" class="show">Show</a>
+                            <a href="{{ route('dashboard.destination.edit', $destination->slug) }}" class="edit">Edit</a>
                             <form action="{{ route('dashboard.destination.delete', $destination->slug) }}" method="POST">
                                 @csrf
                                 @method('DELETE')
-                                <button type="submit">Delete</button>
+                                <button type="submit" class="delete">Delete</button>
                             </form>
                         </td>
                     </tr>

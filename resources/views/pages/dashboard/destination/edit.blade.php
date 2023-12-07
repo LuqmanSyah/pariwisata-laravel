@@ -7,7 +7,10 @@
 @section('content')
     <section class="section-form">
         <hr>
-        <form action="{{ route('dashboard.destination.update', $destination->slug) }}" enctype="multipart/form-data" method="POST">
+        <span><a href="{{ route('dashboard.index') }}" class="breadcrumbs-link">Dashboard /</a></span>
+        <span><a href="{{ route('dashboard.destination.index') }}" class="breadcrumbs-link">Destination /</a></span>
+        <span><a href="{{ route('dashboard.destination.edit', $destination->slug) }}" class="breadcrumbs-link">Edit - {{ $destination->name }} /</a></span>
+        <form action="{{ route('dashboard.destination.update', $destination->slug) }}" enctype="multipart/form-data" method="POST" style="margin-top: 30px;">
             @method('PUT')
             @csrf
             <input type="hidden" value="{{ $destination->image }}" name="oldImage">

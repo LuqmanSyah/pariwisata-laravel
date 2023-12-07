@@ -29,9 +29,9 @@ aside h1 a {
     color: black;
 }
 
-aside img {
+aside span {
     position: absolute;
-    top: 25px;
+    top: 15px;
     right: 25px;
     display: none;
 }
@@ -65,10 +65,16 @@ section.dashboard hr {
     margin-bottom: 30px;
 }
 
+.breadcrumbs-link {
+    text-decoration: none;
+    color: black;
+}
+
 section.dashboard .col {
     display: grid;
-    grid-template-columns: auto auto auto auto;
+    grid-template-columns: repeat(4, 1fr);
     gap: 2rem;
+    margin-top: 30px;
 }
 
 section.dashboard .col div {
@@ -131,8 +137,6 @@ section.destination div table tbody tr td a {
     padding: 5px;
     width: auto;
     border-radius: 5px;
-    color: black;
-    background-color: aliceblue;
 }
 
 section.destination div table tbody tr td img {
@@ -149,11 +153,24 @@ section.destination div table tbody tr td button {
     padding: 5px;
     width: 100%;
     border-radius: 5px;
-    color: black;
     border: 0;
     cursor: pointer;
     font-size: medium;
-    background-color: aliceblue;
+}
+
+.delete {
+    background-color: red;
+    color: white;
+}
+
+.edit {
+    background-color: yellow;
+    color: black;
+}
+
+.show {
+    background-color: aqua;
+    color: black;
 }
 
 section.destination div table tbody tr:hover {
@@ -214,8 +231,10 @@ section.section-form form button {
         width: 40%;
     }
 
-    aside img {
+    aside span {
         display: block;
+        cursor: pointer;
+        font-size: 30px;
     }
 
     main {
@@ -230,6 +249,10 @@ section.section-form form button {
 
     main .hamburger {
         display: inline;
+    }
+
+    section.dashboard .col {
+        grid-template-columns: auto auto;
     }
 }
 

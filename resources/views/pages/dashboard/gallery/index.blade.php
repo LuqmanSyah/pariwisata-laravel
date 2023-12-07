@@ -7,6 +7,8 @@
 @section('content')
     <section class="destination">
         <hr>
+        <span><a href="{{ route('dashboard.index') }}" class="breadcrumbs-link">Dashboard /</a></span>
+        <span><a href="{{ route('dashboard.gallery.index') }}" class="breadcrumbs-link">Gallery /</a></span>
         <a href="{{ route('dashboard.gallery.create') }}" class="btn">Create</a>
         <div>
             <table>
