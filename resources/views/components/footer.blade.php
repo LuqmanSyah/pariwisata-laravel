@@ -1,5 +1,5 @@
 <footer>
-    <h2><a href="">Pariwisata</a></h2>
+    <h2><a href="{{ route('home') }}">{{ \App\Models\Setting::first()->site_name }}</a></h2>
 
     <ul>
         <li><h2>Links</h2></li>

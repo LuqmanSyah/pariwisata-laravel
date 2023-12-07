@@ -48,6 +48,7 @@ class GalleryController extends Controller
 
         $validatedData['user_id'] = Auth::user()->id;
         $validatedData['slug'] = Str::slug($validatedData['name']) . '-' . Str::random(10);
+    
 
         $image = $request->file('image');
         $imageName = time() . '.' . $image->getClientOriginalExtension();

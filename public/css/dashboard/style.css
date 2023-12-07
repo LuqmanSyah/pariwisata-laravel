@@ -24,6 +24,11 @@ aside h1 {
     margin-bottom: 30px;
 }
 
+aside h1 a {
+    text-decoration: none;
+    color: black;
+}
+
 aside img {
     position: absolute;
     top: 25px;

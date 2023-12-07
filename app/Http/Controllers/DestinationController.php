@@ -100,6 +100,7 @@ class DestinationController extends Controller
         $destination = Destination::where('slug', $slug)->first();
 
         $validatedData = $request->validate([
+            'image' => 'image|mimes:png,jpg,jpeg',
             'name' => 'required',
             'price' => 'required',
             'address' => 'required',

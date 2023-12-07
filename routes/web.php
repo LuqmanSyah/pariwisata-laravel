@@ -4,6 +4,7 @@ use App\Http\Controllers\AuthController;
 use App\Http\Controllers\DestinationController;
 use App\Http\Controllers\GalleryController;
 use App\Http\Controllers\PageController;
+use App\Http\Controllers\SettingController;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 
@@ -52,6 +53,11 @@ Route::middleware('auth')->group(function () {
             Route::get('/edit/{slug}', [GalleryController::class, 'edit'])->name('edit');
             Route::put('/update/{slug}', [GalleryController::class, 'update'])->name('update');
             Route::delete('/delete/{slug}', [GalleryController::class, 'destroy'])->name('delete');
+        });
+
+        Route::prefix('setting')->name('setting.')->group(function () {
+            Route::get('/', [SettingController::class, 'index'])->name('index');
+            Route::post('/update', [SettingController::class, 'update'])->name('update');
         });
     });
 });

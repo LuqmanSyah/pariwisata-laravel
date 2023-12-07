@@ -1,37 +1,36 @@
 @extends('layouts.dashboard')
 
 @section('title')
-    Create Gallery
+    Setting Website
 @endsection
 
 @section('content')
     <section class="section-form">
-        <span><a href="">Dashboard</a> / gallery / create</span>
         <hr>
-        <form action="{{ route('dashboard.gallery.store') }}" enctype="multipart/form-data" method="POST">
+        <form action="{{ route('dashboard.setting.update') }}" method="POST">
             @csrf
             <div>
-                <label for="">Name</label>
-                <input type="text" name="name">
+                <label for="">Site Name</label>
+                <input type="text" name="site_name" value="{{ $setting->site_name }}">
                 @error('name')
                     <span class="invalid-message">{{ $message }}</span>
                 @enderror
             </div>
             <div>
-                <label for="">Image</label>
-                <input type="file" name="image">
+                <label for="">Address</label>
+                <textarea name="address" id="" cols="30" rows="10">{{ $setting->address }}</textarea>
                 @error('image')
                     <span class="invalid-message">{{ $message }}</span>
                 @enderror
             </div>
             <div>
-                <label for="">Address</label>
-                <textarea name="address" id="" cols="30" rows="10"></textarea>
+                <label for="">About</label>
+                <textarea name="about" id="" cols="30" rows="10">{{ $setting->about }}</textarea>
                 @error('address')
                     <span class="invalid-message">{{ $message }}</span>
                 @enderror
             </div>
-            <button type="submit">Create</button>
+            <button type="submit">Update</button>
         </form>
     </section>
 @endsection
