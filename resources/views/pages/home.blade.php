@@ -29,6 +29,20 @@
         </div>
     </div>
 
+    <div class="destination">
+        <h2>Most Viewed Destination</h2>
+        <div class="col">
+            @foreach ($mostViewedDestination as $item)
+            <div>
+                <a href="{{ route('show.destination', $item->slug) }}">
+                    <img src="{{ asset($item->image) }}" alt="{{ $item->name }}">
+                    <h4>{{ $item->name }}</h4>
+                </a>
+            </div>
+            @endforeach
+        </div>
+    </div>
+
     <div class="gallery">
         <h2>Gallery</h2>
         <div class="col">

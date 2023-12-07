@@ -13,8 +13,9 @@ class PageController extends Controller
     {
         $destination = Destination::latest()->take(4)->get();
         $gallery = Gallery::latest()->take(4)->get();
+        $mostViewedDestination = Destination::orderBy('most_viewed', 'desc')->take(4)->get();
 
-        return view('pages.home', compact('destination', 'gallery'));
+        return view('pages.home', compact('destination', 'gallery', 'mostViewedDestination'));
     }
 
     public function destination()

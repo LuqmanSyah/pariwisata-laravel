@@ -28,7 +28,7 @@
             </div>
             <div>
                 <label for="">Address</label>
-                <textarea name="address" id="" cols="30" rows="10">{{ old('name') }}</textarea>
+                <textarea name="address" id="" cols="30" rows="10">{{ old('address') }}</textarea>
                 @error('address')
                     <span class="invalid-message">{{ $message }}</span>
                 @enderror
