@@ -6,7 +6,7 @@
 
 @section('content')
 <section class="home">
-    <div class="hero" style='background-image: url("{{ asset('image/tebing-koja.jpg') }}");'>
+    <div class="hero" style="background-image: url('{{ $image }}');">
         <h1>Explore Kab. Tangerang</h1>
     </div>
 

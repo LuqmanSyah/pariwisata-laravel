@@ -93,9 +93,9 @@ section.home .destination h2 {
 }
 
 section.home .destination .col {
-    display: flex;
+    display: grid;
     gap: 2rem;
-    flex: 1;
+    grid-template-columns: repeat(4, 1fr);
 }
 
 section.home .destination .col div {
@@ -135,9 +135,9 @@ section.home .gallery h2 {
 }
 
 section.home .gallery .col{
-    display: flex;
-    flex: 1;
+    display: grid;
     gap: 2rem;
+    grid-template-columns: repeat(4, 1fr);
 }
 
 section.home .gallery .col div {
@@ -332,10 +332,12 @@ footer ul li a:hover {
     }
 
     section.home .destination .col {
+        display: flex;
         flex-direction: column;
     }
 
     section.home .gallery .col {
+        display: flex;
         flex-direction: column;
     }
 

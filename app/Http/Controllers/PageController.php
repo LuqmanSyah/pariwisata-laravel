@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Destination;
 use App\Models\Gallery;
+use App\Models\Setting;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 
@@ -11,11 +12,12 @@ class PageController extends Controller
 {
     public function home()
     {
+        $image = Setting::first()->parallax_image;
         $destination = Destination::latest()->take(4)->get();
         $gallery = Gallery::latest()->take(4)->get();
         $mostViewedDestination = Destination::orderBy('most_viewed', 'desc')->take(4)->get();
 
-        return view('pages.home', compact('destination', 'gallery', 'mostViewedDestination'));
+        return view('pages.home', compact('destination', 'gallery', 'mostViewedDestination', 'image'));
     }
 
     public function destination()
